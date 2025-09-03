@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Student  portfolio</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>DIGITAL PORTFOLIO</title>
+
+  <style>
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      background-color: #f2f2f2;
+
+      color: #333;
+
+    }
+
+    header {
+
+      background-color: #952eaf;
+
+      color: white;
+
+      padding: 2em;
+
+      text-align: center;
+
+    }
+
+    header img {
+
+      width: 130px;
+
+      height: 130px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      margin-bottom: 1em;
+
+    }
+
+    nav {
+
+      background-color: #333;
+
+      display: flex;
+
+      justify-content: center;
+
+    }
+
+    nav a {
+
+      color: white;
+
+      text-decoration: none;
+
+      padding: 1em 2em;
+
+      display: block;
+
+    }
+
+    nav a:hover {
+
+      background-color: #990073;
+
+    }
+
+    .container {
+
+      padding: 2em;
+
+    }
+
+    section {
+
+      display: none;
+
+    }
+
+    section.active {
+
+      display: block;
+
+    }
+
+    .project {
+
+      background: #fff;
+
+      padding: 1em;
+
+      border: 1px solid #ccc;
+
+      margin-bottom: 1em;
+
+      border-radius: 6px;
+
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+    }
+
+    #contact {
+
+      background-color: #e6f7ff;
+
+      padding: 2em;
+
+      border: 2px solid  #990073;
+
+      border-radius: 10px;
+
+    }
+
+    #contact h2 {
+
+      margin-bottom: 1em;
+
+    }
+
+    form {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 1em;
+
+    }
+
+    input, textarea {
+
+      padding: 0.8em;
+
+      font-size: 1em;
+
+      border: 1px solid #aaa;
+
+      border-radius: 5px;
+
+    }
+
+    button {
+
+      padding: 0.7em 1em;
+
+      background-color: #990073;
+
+      color: white;
+
+      border: none;
+
+      cursor: pointer;
+
+      border-radius: 4px;
+
+      font-size: 1em;
+
+    }
+
+    button:hover {
+
+      background-color: #66004d;
+
+    }
+
+    #success-message {
+
+      color: green;
+
+      font-weight: bold;
+
+      display: none;
+
+      margin-top: 1em;
+
+    }
+
+    footer {
+
+      background-color:#d82989 ;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 1em;
+
+      margin-top: 2em;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <img src="C:\Users\keert\OneDrive\Pictures\Screenshots\your-photo.png" alt="Photo" />
+
+    <h1>K. DHIVYASRI</h1>
+
+    <p><strong>Computer Science Student</strong> | Tech Enthusiast | Learner</p>
+
+  </header>
+
+  <nav>
+
+    <a href="#" onclick="showSection('about')">About Me</a>
+
+    <a href="#" onclick="showSection('projects')">Projects</a>
+
+    <a href="#" onclick="showSection('contact')">Contact</a>
+
+  </nav>
+
+  <div class="container">
+
+    <section id="about" class="active">
+
+      <h2>About Me</h2>
+
+      <div>
+
+       <p>Hello! I'm <strong>K. Dhivyasri</strong>, a passionate <strong>Computer Science student</strong> with a keen interest in technology, coding, and problem-solving.</p> 
+
+       <p>I enjoy learning new technologies, building creative projects, and improving my technical and soft skills.</p> 
+
+       <p>My goal is to become a skilled software developer and contribute to impactful projects in the tech world.</p>
+
+     </div>
+
+     <div>
+
+       <h2>Skills</h2>
+
+       <p><strong>Programming Languages:</strong> C, C++, Python (Basic).</p>
+
+       <p><strong>Web Technologies:</strong> HTML, CSS, JavaScript (Basic).</p>
+
+       <p><strong>Database:</strong> MySQL (Basic).</p>
+
+       <p><strong>Tools & Platforms:</strong> MS Office, Visual Studio Code, Git (Beginner).</p>
+
+       <p><strong>Soft Skills:</strong> Teamwork, Time Management, Communication, Adaptability.</p>
+
+    </div>
+
+    </section>
+
+    <section id="projects">
+
+      <h2>Projects</h2>
+
+      <div class="project">
+
+        <h3>Portfolio Website</h3>
+
+        <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+
+      </div>
+
+      <div class="project">
+
+        <h3>Student Database System</h3>
+
+        <p>Created a mini project using MySQL and Python to manage student records and improve database handling skills.</p>
+
+      </div>
+
+    </section>
+
+    <section id="contact">
+
+      <h2>Contact Me</h2>
+
+      <p>Feel free to reach out for collaboration, project discussions, or learning opportunities.</p>
+
+      <form id="contactForm" onsubmit="submitForm(event)">
+
+        <input type="text" placeholder="Your Name" required />
+
+        <input type="email" placeholder="Your Email" required />
+
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+      </form>
+
+      <p id="success-message">✅ Message sent successfully!</p>
+
+    </section>
+
+  </div>
+
+  <footer>
+
+    <p>&copy; K. Dhivyasri. All rights reserved.</p>
+
+  </footer>
+
+  <script>
+
+    function showSection(sectionId) {
+
+      document.querySelectorAll("section").forEach(sec => {
+
+        sec.classList.remove("active");
+
+      });
+
+      document.getElementById(sectionId).classList.add("active");
+
+    }
+
+    function submitForm(e) {
+
+      e.preventDefault();
+
+      document.getElementById("success-message").style.display = "block";
+
+      document.getElementById("contactForm").reset();
+
+    }
+
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
